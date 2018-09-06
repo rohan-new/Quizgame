@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;height:100%;margin:0;overflow: hidden;}
+.mySlides {display: none;}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.container {
+  background: #000 url(images/group11.jpg);
+  background-size: cover;
+  color: #fff;
+  background-repeat:no-repeat;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height:100vh;
+}
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: .6;
+  position: absolute;
+}
+.container1 {
+  background: #000 url(images/earn.jpg);
+  background-size: cover;
+  color: #fff;
+  background-repeat:no-repeat;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height:100vh;
+}
+.color-overlay1 {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: .6;
+  /*position: absolute;*/
+}
+.container2 {
+  background: #000 url(images/group.jpg);
+  background-size: cover;
+  position:relative;
+  color: #fff;
+  background-repeat:no-repeat;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*position: relative;*/
+  height:100vh;
+}
+.color-overlay2 {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: .6;
+  position: absolute;
+}
+.text {
+  font-family:"Courier";
+  position:absolute;
+  font-size: 40px;
+  top: 50%;
+  z-index: 1;
+  text-align: center;
+}
+.brand{
+    font-family: "Times New Roman", Times, serif;
+    position:absolute;
+    font-size: 55px;
+    top:30%;
+    z-index: 1;
+    text-align: center;
+}
+.button {
+  color:black;
+  background-color: white;
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  border-radius:12px;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px 32px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 800px) {
+  .text {
+      font-size: 20px;
+      top: 60%;
+      z-index: 1;
+  }
+  .brand{
+      font-size: 40px;
+      top: 40%;
+      z-index: 1;
+  }
+  .button{
+      text-align:center;
+      top: 80%;
+      left: 35%;
+  }
+  .container{
+      background: #000 url(images/group12.jpg);
+}
+.container1{
+    background: #000 url(images/earn2.jpg);
+}
+.container2{
+    background: #000 url(images/group2.jpg);
+}
+}
+
+@media only screen and (min-height: 800px) {
+  .text {
+      font-size: 20px;
+      top: 60%;
+      z-index: 1;
+  }
+  .brand{
+      font-size: 40px;
+      top: 40%;
+      z-index: 1;
+  }
+  .button{
+      text-align:center;
+      top: 80%;
+      left: 35%;
+  }
+  .container{
+      background: #000 url(images/group123.jpg);
+}
+.container1{
+    background: #000 url(images/group123.jpg);
+}
+.container2{
+    background: #000 url(images/group123.jpg);
+}
+}
+
+</style>
+<meta name="google-site-verification" content="lbhD6pScECA895WfoIXEHSxb9Bjj4DnqiMpXawImJDw" />
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade" >
+    <div class="container">
+         <div class="brand">QUIZNOU</div>
+        <div class="text">REAL-TIME MULTIPLAYER CASH EARNING TRIVIA GAME</div>
+        <div class="color-overlay"></div>
+     </div>
+      <button class ="button">JOIN</button>
+</div>
+
+<div class="mySlides fade">
+    <div class="container1">
+         <div class="brand">QUIZNOU</div>
+        <div class="text">PLAY AGAINST REAL PEOPLE WITH REAL CASH</div>
+        <div class="color-overlay1"></div>
+      </div>
+      <button class ="button">JOIN</button>
+</div>
+
+<div class="mySlides fade">
+    <div class="container2">
+        
+        <div class="brand">QUIZNOU</div>
+        <div class="text">PLAY ON TOPICS WHICH INTERESTS YOU</div>
+        <div class="color-overlay2"></div>
+      </div>
+      <button class ="button">JOIN</button>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+var buttons = document.getElementsByClassName('button');
+for(i=0;i<buttons.length;i++){
+buttons[i].onclick  = function(){
+  window.location.href = "https://quiznou.com/login.html";
+
+
+}
+}
+
+</script>
+
+</body>
+</html> 

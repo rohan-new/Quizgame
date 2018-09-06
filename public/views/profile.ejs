@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Profile </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<script src="/log/js/jquery.min.js"></script>
+
+<link href="/profile/css1/font-awesome.css" rel="stylesheet"> 
+ 
+<link href="/profile/css1/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//fonts.googleapis.com/css?family=Trirong:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+
+		<div class="w3_main_grids">
+			<div class="w3layouts_profile_grid1">
+				<div class="w3l_profile_grid1_padd">
+					<div class="w3ls_menu_grids">
+						<div class="w3ls_menu_grid">
+							<span class="menu-icon">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</span>
+							  
+								<ul class="w3_agile_nav1">
+									<li><a href="/website.html">HOME</a></li>
+								</ul> 	
+								
+								 <script>
+								   $( "span.menu-icon" ).click(function() {
+									 $( "ul.w3_agile_nav1" ).slideToggle( 300, function() {
+									 // Animation complete.
+									  });
+									 });
+								</script>
+							
+						</div>
+						<div class="w3ls_menu_grid">
+							<h2>Profile</h2>
+						</div>
+						<div class="w3ls_menu_grid">
+						    <a href="/upload">
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="agileits_profile">
+						<img src="<%= typeof file != 'undefined' ? file:'/web/images/avatar _40.png' %>" alt="" />
+						<h3><%= typeof username != 'undefined' ?username :'USER' %></h3>
+						<h3><%= typeof mobile != 'undefined' ?mobile :'**********' %></h3>
+						<!--<h3>9874365037</h3>-->
+					</div>
+				</div>
+			</div>
+			<div class="agileinfo_profile_grid2">
+				<br>
+				<br>
+			
+				<div class="wthree_circle_effect">
+					<div class="w3_agileits_circle_effect">
+						<i></i>
+						<p><%= typeof win != 'undefined' ?win :'**' %></p>
+						<h2 style="color:white">WON</h2>
+					</div>
+					<div class="w3_agileits_circle_effect">
+						<i class="agile_red"></i>
+						<p><%= typeof loss != 'undefined' ?loss :'**' %></p>
+						<h2 style="color:white">LOST</h2>
+					</div>
+					<div class="w3_agileits_circle_effect">
+						<i class="agileits_w3layouts_yellow"></i>
+						<p><%= typeof game != 'undefined' ?game :'**' %></p>
+						<h2 style="color:white">Games Played</h2>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>		
+		<script src="/log/js/circle-progress.js"></script>
+		<script src="/log/js/examples.js"></script>
+
+	</div>
+</body>
+</html>
+
+
+
+

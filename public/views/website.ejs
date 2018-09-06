@@ -1,0 +1,200 @@
+
+<!DOCTYPE HTML>
+<head>
+<title>QUIZNOU</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="/web/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="/web/css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='https://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/html/pics/favicon.ico">
+<script type="text/javascript" src="/log/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="/web/js/login.js"></script>
+<script type="text/javascript" src="/web/js/Chart.js"></script>
+ <script type="text/javascript" src="/web/js/jquery.easing.js"></script>
+ <script type="text/javascript" src="/web/js/jquery.ulslide.js"></script>
+</head>
+<body>			       
+	    <div class="wrap">	 
+	      <div class="header">
+	      	  <div class="header_top">
+					  <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="/web/images/nav.png" alt="" /></a>
+							<ul class="nav">
+									<li><a href="/profile"><i><img src="/web/images/user.png" alt="" /></i> PROFILE </a></li>
+								<li><a href="/rules"><i><img src="/web/images/comments.png" alt="" /></i> HOW TO PLAY <span class="messages">?</span></a></li>
+								<li><a href="/Policy"><i><img src="/web/images/lock.png" alt="" /></i>  POLICIES </a></li>
+								<li><a href="/contact"><i><img src="/web/images/mail.png" alt="" /></i>CONTACT US </a></li>
+							<div class="clear"></div>
+						    </ul>
+							<script type="text/javascript" src="/web/js/responsive-nav.js"></script>
+				        </div>	
+					  <div class="profile_details">
+				    		   <div id="loginContainer">
+				                  <a id="loginButton" class=""><span>Me</span></a>   
+				                    <div id="loginBox">                
+				                      <form id="loginForm">
+				                        <fieldset id="body">
+				                            <div class="user-info">
+							        			<h4>Hello,<a href="#"><%= typeof username != 'undefined' ?username :'USER' %> </a></h4>
+							        			<ul>
+							        				<li class="profile active"><a href="/profile">Profile </a></li>
+							        				<li class="logout"><a href="/logout.html"> Logout</a></li>
+							        				<div class="clear"></div>		
+							        			</ul>
+							        		</div>			                            
+				                        </fieldset>
+				                    </form>
+				                </div>
+				            </div>
+				             <div class="profile_img">	
+				             	<a href=""><img src="<%= typeof file1 != 'undefined' ?file1:'/web/images/avatar _40.png' %>" alt="" />	</a>
+				             </div>		
+				             <div class="clear"></div>		  	
+					    </div>	
+		 		      <div class="clear"></div>				 
+				   </div>
+			</div>	  					     
+	</div>
+	  <div class="main">  
+	    <div class="wrap">  		 
+	       <div class="column_left">	          
+	    		 
+		         <div class="tweets">
+	      				<div class="tweets">
+									<h3><i> </i>ENTERTAINTMENT</h3>		              
+										<div class="tweets_list">
+											<ul style="list-style-type:none">
+
+												<li style="text-align:center ">
+											     <div style="text-align:center" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+													<div class="flipper" style="text-align:center">
+														<div class="front">
+															<img src="/web/images/movies.jpeg"  alt="" /> 
+																<h2 id="play" style="text-align-last: center">MOVIES</h2>
+														</div>
+														<div class="back">
+														    <a href="/paytmmovies">
+															<img src="/web/images/paytm.png"  alt="" /> 
+															<h2 id="play" style="text-align-last: center">WIN RS 15 IN 80seconds</h2>
+															</a>
+													    </div>
+												    </div>
+												</div>
+											
+												</li>
+											</ul>
+									   </div>
+								</div>
+					  </div>
+		          	  <div class="social_network_likes">
+				      		
+		          		</div>
+	  		</div> 
+	  		
+            <div class="column_middle">
+             
+		         <div class="weather">
+					<div class="temp_list">
+							<div class="tweets">
+								<h3><i> </i>BACK to SCHOOL</h3>		              
+									<div class="tweets_list">
+										<ul>
+										    <li style="text-align:center">
+										         <div style="text-align:center" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+													<div class="flipper" style="text-align:center">
+														<div class="front">
+															<img src="/web/images/maths.jpg"  alt="" /> 
+																<h2 id="play" style="text-align-last: center">MATHS</h2>
+														</div>
+														<div class="back">
+														    <a href="/paytmmaths">
+															<img src="/web/images/paytm.png"  alt="" /> 
+															<h2 id="play" style="text-align-last: center">WIN RS 15 IN 80seconds</h2>
+															</a>
+													    </div>
+												    </div>
+												</div>
+										        
+												<!--<a href="/paytmmaths">-->
+												<!--<img src="/web/images/maths.jpg"  alt="" />-->
+												<!--<h2>MATHS</h2>-->
+												<!--</a>-->
+											</li>
+											
+										</ul>
+								   </div>
+							</div>
+				    </div>
+				</div>	           
+    	    </div>
+			
+			
+
+            <div class="column_right">
+              <div class="column_right_grid">
+                <div style="text-align:center" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper" style="text-align:center">
+						<div class="front">
+							<img src="/web/images/gk.jpg"  alt="" /> 
+							<h2 id="play" style="text-align-last: center">GENERAL KNOWLEDGE</h2>
+						</div>
+						<div class="back">
+					    <a href="/paytmGK">
+						<img src="/web/images/paytm.png"  alt="" /> 
+						<h2 id="play" style="text-align-last: center">WIN RS 15 IN 80seconds</h2>
+						</a>
+					    </div>
+					</div>
+				</div>
+				<!--<a href="/paytmGK">-->
+				<!--<img src="/web/images/gk.jpg" alt="" />-->
+				<!--<h3>GENERAL KNOWLEDGE</h3>-->
+				<!--</a>	    -->
+			  </div>
+              <div class="column_right_grid date_events">
+						<div class="tweets">
+								<h3><i> </i>SPORTS</h3>		              
+									<div class="tweets_list">
+										<ul>
+										    <li style="text-align:center">
+										  		<div style="text-align:center" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+													<div class="flipper" style="text-align:center">
+														<div class="front">
+															<img src="/web/images/sports.jpg"  alt="" /> 
+																<h2 id="play" style="text-align-last: center">SPORTS</h2>
+														</div>
+														<div class="back">
+														    <a href="/paytmsports">
+															<img src="/web/images/paytm.png"  alt="" /> 
+															<h2 id="play" style="text-align-last: center">WIN RS 15 IN 80seconds</h2>
+															</a>
+													    </div>
+												    </div>
+												</div>
+											<!--<a href="/paytmsports">-->
+											<!--<img src="/web/images/sports.jpg"  alt="" />-->
+											<!--<h2>SPORTS</h2>-->
+											<!--</a>-->
+											</li>
+										</ul>
+								   </div>
+							</div>
+				  </div>
+             </div>
+    	<div class="clear"></div>
+ 	 </div>
+   </div>
+  		 <div class="copy-right">
+			<p> IT'S A QUIZNOU PRODUCTION! </p>	
+	 	 </div>   
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.5/platform.min.js"></script>
+<script>
+console.log(platform.name) ;
+    if(platform.name == "Safari"){
+        window.location.href = "https://quiznou.com" ;
+    }
+</script>
+</html>
+

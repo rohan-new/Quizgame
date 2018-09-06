@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>QUIZ book</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/main.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+    if (performance.navigation.type === 1) {
+  // page was just refreshed:
+  window.location.href = 'http://www.quiznou.com/website.html';
+} else {
+  // rest of your Javascript
+}
+      </script>
+</head>
+<body>
+    <div id="waiting"   class="waiting  deep-purple darken-4 center-align">
+            <div class="bookshelf_wrapper">
+                <ul class="books_list">
+                    <li class="book_item first"><img src="/html/pics/profile2.jpeg">   </li>
+                    <li class="book_item second"> <img src="/html/pics/profile1.jpeg">  </li>
+                    <li class="book_item third"> <img src="/html/pics/profile8.jpeg">  </li>
+                    <li class="book_item fourth"> <img src="/html/pics/profile7.jpeg"> </li>
+                    <li class="book_item fifth"><img src="/html/pics/profile6.jpeg"> </li>
+                    <li class="book_item sixth"> <img src="/html/pics/profile5.jpeg"> </li>
+                    </ul>
+                   
+            </div>
+        <span class="white-text text-darken-2">LOOKING FOR AN OPPONENT!</span>
+    </div>     
+    
+    <div class="container" id="quiz">   
+        <audio src="/html/Music/game.mp3" id="timer_play" type="audio/mpeg" autoplay="false" onloadeddata="setHalfVolume()" >
+        </audio>
+        
+        <div class="  center-align"> 
+            <span id="countdown" class="timer flow-text center-align"></span>
+        </div> 
+        <div class="chip left">
+            <img src="" class="circle responsive-img " id="profile" alt="Contact Person">
+            <span id="name"></span> 
+        </div>
+        <div class="chip right" >
+            <img src="" class="circle responsive-img " id="profile1" alt="Contact Person">
+            <span id="enemyname"></span> 
+        </div><br><br>
+        <div class="left">
+            <span class="score flow-text" id="score1"></span>
+        </div>
+        <div class="right">
+            <span class="score flow-text " id="score2"></span>
+        </div>
+       <br><br>
+       <div class="card-panel deep-purple darken-4 center-align">
+           <span id="question" class=" flow-text white-text text-darken-2"></span>
+       </div>
+     
+       <div class=" buttons  row center-align">
+           <button class="button col s12 m6  center-align" id='button0'  onclick ="answer('0')" style ="display:none"><span class=" flow-text white-text text-darken-2" id="option0"></span></button><br>
+           <button class="button col s12 m6  center-align" id='button1'  onclick ="answer('1')" style ="display:none"><span class=" flow-text white-text text-darken-2" id="option1"></span></button><br>
+           <button class="button col s12 m6  center-align" id='button2'  onclick ="answer('2')" style ="display:none"><span class=" flow-text white-text text-darken-2" id="option2"></span></button><br>
+           <button class="button col s12 m6  center-align" id='button3'  onclick ="answer('3')" style ="display:none"><span class=" flow-text white-text text-darken-2" id="option3"></span></button><br>
+       </div>
+    </div>
+
+    <!-- end of game -->
+    
+    <div class="container" id="end" style="display:none">
+        <a href="/website.html" class="home center-align"><img src="web/images/homeicon.png"></a>
+        <img src="" class="circle responsive-img" id="profile_big">
+        <span id="finalscore"></span>
+        <img src="" class="circle responsive-img" id="profile_big_1">
+        <span id="finalscore1"></span>
+        <div id="text">
+            <h1>L<span id="offset">O</span>ST</h1>
+        </div>
+        <div id="replay">
+            <a href="/english.html">
+            <h1>RE<span id="offset">PL</span>AY</h1>
+            </a>
+        </div>
+    </div>
+    <!-- page when you win -->
+    <div class="container" id="win" style="display:none">
+        <a href="/website.html" class="home center-align"><img src="web/images/homeicon.png"></a>
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+            <img src="" class="circle responsive-img " id="profile_win" alt="Contact Person">
+            <img src="" class="circle responsive-img " id="profile_win1" alt="Contact Person">
+        </div>
+        <span id="finalscore_win"></span>
+        <span id="finalscore_win1"></span>
+
+        <div id="text">
+            <h1>W<span id="offset">O</span>N</h1>
+        </div>
+        <div id="replay">
+            <a href="/english.html">
+            <h1>RE<span id="offset">PL</span>AY</h1>
+            </a>
+        </div>
+    </div>
+
+    <!-- when you draw -->
+    <div class="container" id="draw" style="display:none">
+            <a href="/website.html" class="home center-align"><img src="web/images/homeicon.png"></a>
+            <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+                <img src="" class="circle responsive-img " id="profile_win" alt="Contact Person">
+                <img src="" class="circle responsive-img " id="profile_win1" alt="Contact Person">
+            </div>
+            <span id="finalscore_win"></span>
+            <span id="finalscore_win1"></span>
+    
+            <div id="text">
+                <h1>D<span id="offset">RA</span>W</h1>
+            </div>
+            <div id="replay">
+                <a href="/english.html">
+                <h1>RE<span id="offset">PL</span>AY</h1>
+                </a>
+            </div>
+    </div>
+    
+     <!-- when  no opponent found -->
+    <div class="container" id="search" style="display:none">
+            <div class="lasvegas">
+                    No match f<span>ou</span>nd<br>
+                     !
+                  </div>
+
+    <a href="/website.html" class="home center-align"><img src="web/images/homeicon.png"></a>
+</div>
+    
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script> 
+</body>
+<script src = "/socket.io/socket.io.js"></script>
+<script src = "js/english.js"></script>
+<script>
+function setHalfVolume() {
+        var myAudio = document.getElementById("timer_play");
+        myAudio.volume = 0.3;
+    }
+
+      // buttons display
+    function button0(){
+        document.getElementById('button0').style.display = "inline";
+    }
+    function button1(){
+        document.getElementById('button1').style.display = "inline";
+    }
+    function button2(){
+        document.getElementById('button2').style.display = "inline";
+    }
+    function button3(){
+        document.getElementById('button3').style.display = "inline";
+    }
+
+
+    // buttons disappear for next questions
+    function button00(){
+        document.getElementById('button0').style.display = "none";
+    }
+    function button11(){
+        document.getElementById('button1').style.display = "none";
+    }
+    function button22(){
+        document.getElementById('button2').style.display = "none";
+    }
+    function button33(){
+        document.getElementById('button3').style.display = "none";
+    }
+    
+
+
+
+</script>
+</html>

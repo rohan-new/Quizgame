@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Welcome To Quiznou</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="/log/css/style.css" type="text/css" media="all">
+          <!--<link rel="shortcut icon" href="/html/pics/favicon.ico">-->
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- //fonts -->
+    <!-- Font-Awesome-File -->
+    <link rel="stylesheet" href="/log/css/font-awesome.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="content-w3ls">
+        <div class="agileits-grid">
+            <div class="content-top-agile">
+                <h2>IT'S TIME TO EARN CASH!</h2>
+            </div>
+            <div class="content-bottom">
+                <!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                
+              <%= message %></div>
+	<% } %>
+                <form action="/login.html" method="POST">
+                    <div class="field_w3ls">
+                        <div class="field-group">
+                            <input name="username" id="text1" type="text" value="" placeholder="username" required>
+                        </div>
+                        <div class="field-group">
+                            <input id="password-field" type="password" class="form-control" name="password" value="" placeholder="Password">
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                    <div class="wthree-field">
+                        <input id="saveForm" name="saveForm" type="submit" value="Login" />
+                    </div>
+                  
+                </form>
+               
+                 <ul class="list-login">
+                <div class="wthree-field">
+                    <input id="saveForm" name="saveForm" type="submit" onclick="window.location.href ='/register.html'" value="NEW USER?" />
+                </div>
+            </ul>
+            </div>
+            <!-- //content bottom -->
+        </div>
+    </div>
+    <script src="/log/js/jquery-2.2.3.min.js" async></script>
+    <!-- script for show password -->
+    <script>
+        $(".toggle-password").click(function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
+        $()
+    </script>
+    <!-- /script for show password -->
+
+</body>
+<!-- //Body -->
+
+</html>
